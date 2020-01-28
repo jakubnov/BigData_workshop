@@ -52,4 +52,35 @@ Once uploaded run refresh table's metadata:
   
   <b> At this point you are able to upload any data in csv file into HDFS.  </b>
   
+  ### Step 4: Store your data in compresed table. 
+  To use csv file format for storing huge amount of data isn't effective and usually serves as the first step of uploading data. In case you want to keep data in HDFS for a longer time (it isn't one time analysis), it's better to use some file format that supports compression - e.g. Parquet. 
+  
+  Let's repeate proces - Create table query as a first step: 
+  
+  > CREATE TABLE test_jno.sales100k_parquet <br>
+> (region STRING  <br>
+> ,Country CHAR(50) <br>
+> ,Item_Type CHAR(50) <br>
+> ,Sales_Channel CHAR(50) <br>
+> ,Order_Priority CHAR(50) <br>
+> ,Order_Date TIMESTAMP  <br>
+> ,Order_ID INT <br>
+> ,Ship_Date TIMESTAMP <br>
+> ,Units_Sold INT <br>
+> ,Unit_Price FLOAT <br>
+> ,Unit_Cost FLOAT <br>
+> ,Total_Revenue FLOAT <br>
+> ,Total_Cost FLOAT <br>
+> ,Total_Profit FLOAT <br>
+> ) <br>
+> stored as PARQUET;  <br>
+  
+ Once is table succesfully created, migrate data from csv table to parquet ones. 
+ 
+ > INSERT INTO TABLE test_jno.sales100k_parquet SELECT * FROM test_jno.sales100k ; <br> 
+ 
+ ### Step 5: Compare table sizes
+ 
+ Navigate to File browser and to the tables where when after opening table folder you will see dataset. As you can just see, CSV file is multiple times bigger.  
+
   
