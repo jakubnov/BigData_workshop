@@ -79,6 +79,15 @@ Once uploaded run refresh table's metadata:
  
  > INSERT INTO TABLE test_jno.sales100k_parquet SELECT * FROM test_jno.sales100k_csv ; <br> 
  
+After this step there is again a need to refresh metadata for this new table: 
+
+> REFRESH test_jno.sales100k_parquet; <br>
+
+And now you can query the data.
+
+> SELECT * FROM test_jno.sales100k_parquet; <br> 
+
+ 
  ### Step 5: Compare table sizes
  
  Navigate to File browser and to the tables where when after opening table folder you will see dataset. As you can just see, CSV file is multiple times bigger.  
