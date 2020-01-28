@@ -21,9 +21,11 @@ Not important in this step, but better to do that - refresh metadata after creat
 ### Step 2: Create and save a Have query
 Since we have created a table into that result of schedulled query will be saved, we can prepare some sample query. Let's have e.g.
 
-> <br> 
+> INSERT INTO test_jno.scheduler_output <br>
+> SELECT cast(nvl(max(incremental_id),1)+1 as int), current_timestamp() FROM test_jno.scheduler_output; <br>
+> REFRESH test_jno.scheduler_output; <br>
 
-
+and hit save the query. Have only this query in the query window. 
 
 ### Step 3: Schedule query
 
