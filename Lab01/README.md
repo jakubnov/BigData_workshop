@@ -41,7 +41,7 @@ Once uploaded run refresh table's metadata:
 
 > REFRESH databasename.tablename; 
 
-<i> It isn't needed to refresh all tables metadata and sometimes it isn't even possible because of lack of permission to all databases.<i/>
+<i> It isn't needed to refresh all tables metadata and sometimes it isn't even possible because of lack of permission to all databases.</i>
   
   <u> It's a good custom to refresh tables metadata after each data manipulation within table/tables. </u>
   
