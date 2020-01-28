@@ -8,12 +8,21 @@ It's important to have a table where data from scheduled runs will be stored. Th
 
 > CREATE TABLE test_jno.scheduler_output <br>
 > ( <br>
-> INCREMENTAL_ID INTEGER <br> 
-> TIMESTAMP 
+> Incremental_ID INTEGER, <br> 
+> time TIMESTAMP <br> 
 > ) <br>
 > STORED AS PARQUET; 
 
+Not important in this step, but better to do that - refresh metadata after creation of the table: 
+
+> REFRESH test_jno.scheduler_output; 
+
+
 ### Step 2: Create and save a Have query
+Since we have created a table into that result of schedulled query will be saved, we can prepare some sample query. Let's have e.g.
+
+> <br> 
+
 
 
 ### Step 3: Schedule query
