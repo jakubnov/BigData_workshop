@@ -7,9 +7,26 @@ The first step is to know data structure and prepare table for dataset. Go to de
 
 Example bellow: 
 
-> test 1 <br>
-> test 2
-> test3
+> CREATE TABLE test_jno.sales100k ( <br>
+> Region CHAR(50)  <br>
+> ,Country CHAR(50) <br>
+> ,Item_Type CHAR(50) <br>
+> ,Sales_Channel CHAR(50) <br>
+> ,Order_Priority CHAR(50) <br>
+> ,Order_Date TIMESTAMP  <br>
+> ,Order_ID INT <br>
+> ,Ship_Date TIMESTAMP <br>
+> ,Units_Sold INT <br>
+> ,Unit_Price FLOAT <br>
+> ,Unit_Cost FLOAT <br>
+> ,Total_Revenue FLOAT <br>
+> ,Total_Cost FLOAT <br>
+> ,Total_Profit FLOAT <br>
+> ) <br>
+> ROW FORMAT DELIMITED <br>
+> FIELDS TERMINATED BY ',' <br>
+> STORED AS TEXTFILE <br>
+> ; <br>
+> 
 
-Create table from csv file. 
-save table as csv, parquet
+end of example
