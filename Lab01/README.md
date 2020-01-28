@@ -1,6 +1,7 @@
-# Lab1: Import data into Hive table
+# Lab1: Import data into Hive tables
 
-## Goal: Once done, user will be able to upload csv dataset into Hadoop table structures and to work with the table via SQL. There will be comparison when creating table stored in csv and parquet. 
+## Lab goal: 
+Once done, user will be able to upload csv dataset into Hadoop table structures and to work with the table via SQL. There will be comparison when creating table stored in csv and parquet. 
 
 ### Step 1: Table creation.
 The first step is to know data structure and prepare table for dataset. Go to dedicated database where you want to create the table (and have create access in there) and create table. 
