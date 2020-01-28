@@ -77,7 +77,7 @@ Once uploaded run refresh table's metadata:
   
  Once is table succesfully created, migrate data from csv table to parquet ones. 
  
- > INSERT INTO TABLE test_jno.sales100k_parquet SELECT * FROM test_jno.sales100k ; <br> 
+ > INSERT INTO TABLE test_jno.sales100k_parquet SELECT * FROM test_jno.sales100k_csv ; <br> 
  
  ### Step 5: Compare table sizes
  
