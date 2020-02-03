@@ -13,7 +13,7 @@ It's important to have a table where data from scheduled runs will be stored. Th
 > ) <br>
 > STORED AS PARQUET; 
 
-Not important in this step, but better to do that - refresh metadata after creation of the table: 
+Not important in this step, but better to do that - refresh metadata after creation of the table. In case you write code in Hive, there is no need to run following command, just for Impala: 
 
 > REFRESH 202002_workshop.jno_scheduler_output; 
 
