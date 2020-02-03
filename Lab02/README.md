@@ -37,12 +37,12 @@ Save the schedule under your name e.g. JNO_schedule_test_202002
 Open Scheduler - Schedule
 Define new schedule: add workflow you created in the previous step and set scheduler.
 e.g. * 16-17 * * *  -> query will run each day, each minute between 16-17 hour (4-5pm). 
-<u> help: </u>
-1st possition: Minute (0-59)
-2nd possition: Hour (0-23)
-3rd possition: Day of month (1-31) 
-4th possition: Month of year (1-12) 
-5th possition: Day of week (0-7) 0 and 7 are Sundays 
+<u> help: </u> </br>
+1st possition: Minute (0-59) </br>
+2nd possition: Hour (0-23)</br>
+3rd possition: Day of month (1-31) </br>
+4th possition: Month of year (1-12) </br>
+5th possition: Day of week (0-7) 0 and 7 are Sundays </br>
                
 
 
