@@ -28,7 +28,7 @@ Since we have created a table into that result of schedulled query will be saved
 and hit save the query. Have only this query in the query window. 
 
 ### Step 3: Schedule query
-
+Open Scheduler - Worflow and create new workflow: drag and drop Hive query
 
 ### Step 4: Check results
 First step is to refresh medata in case you didn't add REFRESH databasename.tablename at the end of scheduled script.
