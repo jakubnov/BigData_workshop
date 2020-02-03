@@ -23,7 +23,6 @@ Since we have created a table into that result of schedulled query will be saved
 
 > INSERT INTO 202002_workshop.jno_scheduler_output <br>
 > SELECT cast(nvl(max(incremental_id),1)+1 as int), current_timestamp() FROM 202002_workshop.jno_scheduler_output; <br>
-> REFRESH 202002_workshop.jno_scheduler_output; <br>
 
 and hit save the query. Have only this query in the query window. 
 
