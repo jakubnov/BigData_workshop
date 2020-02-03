@@ -45,6 +45,9 @@ Once uploaded run refresh table's metadata:
   
   <u> It's a good custom to refresh tables metadata after each data manipulation within table/tables. </u>
   
+Sometimes access though ... isn't possible - usually in situation when user doesn't have access to all folders. Then there is a workaround write exact URL address of database. In this case: https://naczsx012.cz.nonprod:8888/hue/filebrowser/view=/user/hive/warehouse/202002_workshop.db
+
+  
   ### Step 3: Select your data
   At this moment you should be able to see uploaded data in your table. 
   
