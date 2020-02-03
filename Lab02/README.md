@@ -29,12 +29,13 @@ and hit save the query. Have only this query in the query window.
 
 ### Step 3: Create workflow
 Open Scheduler - Worflow and create new workflow: drag and drop Hive query. 
+
 Save the schedule under your name e.g. JNO_schedule_test_202002
 
 <i> Note: It's important to change Actions into Documents. Hive query isn't available in Actions. </i>
 
 ### Step 4: Schedule query
-Open Scheduler - Schedule
+Open Scheduler - Schedule </br>
 Define new schedule: add workflow you created in the previous step and set scheduler.
 e.g. * 16-17 * * *  -> query will run each day, each minute between 16-17 hour (4-5pm). 
 <u> help: </u> </br>
