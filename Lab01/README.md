@@ -8,6 +8,8 @@ The first step is to know data structure and prepare table for dataset. Go to de
 
 Open Impala: Query -> Editor -> Impala
 
+![](printscreens/Impala.png)
+
 Example bellow: 
 
 > CREATE TABLE 202002_workshop.jno_sales100k_csv ( <br>
@@ -30,12 +32,24 @@ Example bellow:
 > FIELDS TERMINATED BY ',' <br>
 > STORED AS TEXTFILE <br>
 > ; <br>
-> 
+
+![](printscreens/Create_table.png)
 
 After hitting a RUN button you should be able see Success information under the query. 
 
 ### Step 2: Import data
-As a next step when table is created it's need to upload data file on HDFS. Go to File Browser and locate to database (usually path: /user/hive/warehouse/databasename.db) and you should be able to see all existing tables within the database. Table created in the step before should be among them. Table in HDFS is presented as folder - open that folder. In here you should be able see table content. 
+As a next step when table is created it's need to upload data file on HDFS. Go to File Browser. 
+
+![](printscreens/left_menu.png)
+
+![](printscreens/left_menu_files.png)
+
+Locate to database (usually path: /user/hive/warehouse/databasename.db). Sometimes access though ... isn't possible - usually in situation when user doesn't have access to all folders. Then there is a workaround write exact URL address of database. In this case: https://naczsx012.cz.nonprod:8888/hue/filebrowser/view=/user/hive/warehouse/202002_workshop.db
+
+![](printscreens/File_browser.png)
+
+
+You should be able to see all existing tables within the database. Table created in the step before should be among them. Table in HDFS is presented as folder - open that folder. In here you should be able see table content. 
 
 Upload your csv file into the table folder. 
 
@@ -45,10 +59,8 @@ Once uploaded run refresh table's metadata:
 
 <i> It isn't needed to refresh all tables metadata and sometimes it isn't even possible because of lack of permission to all databases.</i>
   
-  <u> It's a good custom to refresh tables metadata after each data manipulation within table/tables. </u>
+  <u> It's a good custom to refresh tables metadata after each data manipulation within table/tables when you work with Impala. In case of Hive it isn't needed. Ther reason is that Impala is using Hive metastore and can't update it / refresh metadata.  </u>
   
-Sometimes access though ... isn't possible - usually in situation when user doesn't have access to all folders. Then there is a workaround write exact URL address of database. In this case: https://naczsx012.cz.nonprod:8888/hue/filebrowser/view=/user/hive/warehouse/202002_workshop.db
-
   
   ### Step 3: Select your data
   At this moment you should be able to see uploaded data in your table. 
