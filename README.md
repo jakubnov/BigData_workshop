@@ -1,3 +1,5 @@
 # BigData
 
-This is a place where I will be preparing presentation for Big Data Hadoop for business users.
+Notes for Hadoop workshop - 1st part: Hadoop from Hue. 
+
+Downlaod dataset in Data folder, then continue to Lab01. 
