@@ -6,6 +6,8 @@ Once done, user will be able to upload csv dataset into Hadoop table structures 
 ### Step 1: Table creation.
 The first step is to know data structure and prepare table for dataset. Go to dedicated database where you want to create the table (and have create access in there) and create table. 
 
+Open Impala: Query -> Editor -> Impala
+
 Example bellow: 
 
 > CREATE TABLE 202002_workshop.jno_sales100k_csv ( <br>
