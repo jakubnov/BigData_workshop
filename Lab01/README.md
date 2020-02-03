@@ -8,7 +8,7 @@ The first step is to know data structure and prepare table for dataset. Go to de
 
 Example bellow: 
 
-> CREATE TABLE test_jno.sales100k_csv ( <br>
+> CREATE TABLE 202002_workshop.jno_sales100k_csv ( <br>
 > Region CHAR(50)  <br>
 > ,Country CHAR(50) <br>
 > ,Item_Type CHAR(50) <br>
@@ -48,7 +48,7 @@ Once uploaded run refresh table's metadata:
   ### Step 3: Select your data
   At this moment you should be able to see uploaded data in your table. 
   
-  > SELECT * FROM test_jno.sales100k_csv; 
+  > SELECT * FROM 202002_workshop.jno_sales100k_csv; 
   
   <b> At this point you are able to upload any data in csv file into HDFS.  </b>
   
@@ -57,7 +57,7 @@ Once uploaded run refresh table's metadata:
   
   Let's repeate proces - Create table query as a first step: 
   
-  > CREATE TABLE test_jno.sales100k_parquet <br>
+  > CREATE TABLE 202002_workshop.jno_sales100k_parquet <br>
 > (region STRING  <br>
 > ,Country CHAR(50) <br>
 > ,Item_Type CHAR(50) <br>
@@ -77,15 +77,15 @@ Once uploaded run refresh table's metadata:
   
  Once is table succesfully created, migrate data from csv table to parquet ones. 
  
- > INSERT INTO TABLE test_jno.sales100k_parquet SELECT * FROM test_jno.sales100k_csv ; <br> 
+ > INSERT INTO TABLE 202002_workshop.jno_sales100k_parquet SELECT * FROM 202002_workshop.jno_sales100k_csv ; <br> 
  
 After this step there is again a need to refresh metadata for this new table: 
 
-> REFRESH test_jno.sales100k_parquet; <br>
+> REFRESH 202002_workshop.jno_sales100k_parquet; <br>
 
 And now you can query the data.
 
-> SELECT * FROM test_jno.sales100k_parquet; <br> 
+> SELECT * FROM 202002_workshop.jno_sales100k_parquet; <br> 
 
  
  ### Step 5: Compare table sizes
