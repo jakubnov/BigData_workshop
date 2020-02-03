@@ -18,7 +18,7 @@ Not important in this step, but better to do that - refresh metadata after creat
 > REFRESH test_jno.scheduler_output; 
 
 
-### Step 2: Create and save a Have query
+### Step 2: Create and save a Hive query
 Since we have created a table into that result of schedulled query will be saved, we can prepare some sample query. Let's have e.g.
 
 > INSERT INTO test_jno.scheduler_output <br>
@@ -27,10 +27,19 @@ Since we have created a table into that result of schedulled query will be saved
 
 and hit save the query. Have only this query in the query window. 
 
-### Step 3: Schedule query
-Open Scheduler - Worflow and create new workflow: drag and drop Hive query
+### Step 3: Create workflow
+Open Scheduler - Worflow and create new workflow: drag and drop Hive query. 
+Save the schedule under your name e.g. JNO_schedule_test_202002
 
-### Step 4: Check results
+<i> Note: It's important to change Actions into Documents. Hive query isn't available in Actions. </i>
+
+### Step 4: Schedule query
+Open Scheduler - Schedule
+Define new schedule: add workflow you created in the previous step and set scheduler.
+e.g. * 16-17 * * *  -> query will run each day, each minute between 16-17 hour (4-5pm). 
+Save the schedule.
+
+### Step 5: Check results
 First step is to refresh medata in case you didn't add REFRESH databasename.tablename at the end of scheduled script.
 
 Run:
