@@ -1,4 +1,4 @@
-# BigData
+# BigData workshop
 
 Notes for Hadoop workshop - 1st part: Hadoop from Hue. 
 
