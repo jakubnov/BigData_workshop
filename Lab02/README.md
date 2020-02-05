@@ -39,6 +39,13 @@ Define new schedule: add workflow you created in the previous step and set sched
 
 ![](printscreens/Scheduler.png)
 
+<b> Important parts to setup: </b>
+* Check Advanced settings
+* Crontab set as * * * * *  (5 stars) - query will run each minute
+* Set Timezone as "Europe/Prague" 
+* From / To withtin the same day, e.g. for about an hour interval
+
+
 
 e.g. * 16-17 * * *  -> query will run each day, each minute between 16-17 hour (4-5pm). 
 <u> help: </u> </br>
