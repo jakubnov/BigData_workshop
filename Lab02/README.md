@@ -45,6 +45,8 @@ Define new schedule: add workflow you created in the previous step and set sched
 * Set Timezone as "Europe/Prague" 
 * From / To withtin the same day, e.g. for about an hour interval
 
+After this commit schedule (without dryrun). 
+
 
 
 e.g. * 16-17 * * *  -> query will run each day, each minute between 16-17 hour (4-5pm). 
