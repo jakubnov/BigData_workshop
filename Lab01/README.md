@@ -69,7 +69,44 @@ Once uploaded run refresh table's metadata:
   
   <b> At this point you are able to upload any data in csv file into HDFS.  </b>
   
-  ### Step 4: Store your data in compresed table. 
+  ### Step 4: Prepare data for analysis 
+  
+  Chacking data you may noticed two things that will cause some troubles data processing: 
+  * Dataset was loaded with header
+  * Data in columns contain gaps IN CHAR() data type columns. 
+  
+  Because Impala doesn't support dropping or deleting a row in a table. The alternative is to either drop the table or migrate the required data to other tables and then delete the entire original table. Together with this we will remove gaps in CHAR() columns by btrim() function. 
+  
+  
+> CREATE TABLE IF NOT EXISTS 202002_workshop.jno_sales100k_csv_clean 
+> AS 
+> SELECT 
+> btrim(region) as region
+> ,btrim(country) as country
+> ,btrim(item_type) as item_type
+> ,btrim(sales_channel) as sales_channel
+> ,btrim(order_priority) as order_priority
+> ,order_date
+> ,order_id
+> ,ship_date
+> ,units_sold
+> ,unit_price
+> ,unit_cost
+> ,total_revenue
+> ,total_cost
+> ,total_profit
+> FROM `202002_workshop`.jno_sales100k_csv
+> WHERE region NOT LIKE ('%Region%') -- from original dataset format 
+> AND btrim(region) <> 'Region' -- after removing gaps;
+
+Data is ready for processing and analysis now. Try some queries and visualizations directly in Impala, e.g.:
+
+
+![](printscreens/Impala_graph.png)
+
+
+  
+  ### Step 5: Store your data in compresed table. 
   To use csv file format for storing huge amount of data isn't effective and usually serves as the first step of uploading data. In case you want to keep data in HDFS for a longer time (it isn't one time analysis), it's better to use some file format that supports compression - e.g. Parquet. 
   
   Let's repeate proces - Create table query as a first step: 
@@ -105,7 +142,7 @@ And now you can query the data.
 > SELECT * FROM 202002_workshop.jno_sales100k_parquet; <br> 
 
  
- ### Step 5: Compare table sizes
+ ### Step 6: Compare table sizes
  
  Navigate to File browser and to the tables where when after opening table folder you will see dataset. As you can just see, CSV file is multiple times bigger.  
 
