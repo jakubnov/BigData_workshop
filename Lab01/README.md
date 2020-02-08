@@ -57,8 +57,14 @@ Once uploaded run refresh table's metadata:
 
 > REFRESH databasename.tablename; 
 
-<i> It isn't needed to refresh all tables metadata and sometimes it isn't even possible because of lack of permission to all databases.</i>
-  
+<i> Note: </i>
+There is often reccomended to Invalidate all metadata and rebuild index, but this has some consequences: 
+* It's better to refresh just the table you are working with instead of Invalidating all metadata and rebuilding index. Invalidation of all metadata is resource demanding and in case there are hundreds or thousands tables (with thousands of data files) could cause some serious delays. 
+* When there are access restrictions set up on cluster per user groups and you are not allowed to access (and thefore also see) all databases, you won't be able to invalidate and refresh all metadata (you will be facing error on top right corner) on following screen.
+
+![](printscreens/Impala_invalidate.png)
+
+
   <u> It's a good custom to refresh tables metadata after each data manipulation within table/tables when you work with Impala. In case of Hive it isn't needed. Ther reason is that Impala is using Hive metastore and can't update it / refresh metadata.  </u>
   
   
