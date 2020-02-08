@@ -37,6 +37,11 @@ Example bellow:
 
 After hitting a RUN button you should be able see Success information under the query. 
 
+When you want to see the table in table list on left side, it's needed to run Perform incremental metadata update. - as shown on picture bellow. 
+
+![](printscreens/Impala_new_table.png)
+
+
 ### Step 2: Import data
 As a next step when table is created it's need to upload data file on HDFS. Go to File Browser. 
 
