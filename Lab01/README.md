@@ -78,26 +78,26 @@ Once uploaded run refresh table's metadata:
   Because Impala doesn't support dropping or deleting a row in a table. The alternative is to either drop the table or migrate the required data to other tables and then delete the entire original table. Together with this we will remove gaps in CHAR() columns by btrim() function. 
   
   
-> CREATE TABLE IF NOT EXISTS 202002_workshop.jno_sales100k_csv_clean 
-> AS 
-> SELECT 
-> btrim(region) as region
-> ,btrim(country) as country
-> ,btrim(item_type) as item_type
-> ,btrim(sales_channel) as sales_channel
-> ,btrim(order_priority) as order_priority
-> ,order_date
-> ,order_id
-> ,ship_date
-> ,units_sold
-> ,unit_price
-> ,unit_cost
-> ,total_revenue
-> ,total_cost
-> ,total_profit
-> FROM `202002_workshop`.jno_sales100k_csv
-> WHERE region NOT LIKE ('%Region%') -- from original dataset format 
-> AND btrim(region) <> 'Region' -- after removing gaps;
+> CREATE TABLE IF NOT EXISTS 202002_workshop.jno_sales100k_csv_clean <br> 
+> AS  <br>
+> SELECT  <br>
+> btrim(region) as region <br>
+> ,btrim(country) as country <br>
+> ,btrim(item_type) as item_type <br>
+> ,btrim(sales_channel) as sales_channel <br>
+> ,btrim(order_priority) as order_priority <br>
+> ,order_date <br>
+> ,order_id <br>
+> ,ship_date <br>
+> ,units_sold <br>
+> ,unit_price <br>
+> ,unit_cost <br>
+> ,total_revenue <br>
+> ,total_cost <br>
+> ,total_profit <br>
+> FROM `202002_workshop`.jno_sales100k_csv <br>
+> WHERE region NOT LIKE ('%Region%') -- from original dataset format  <br>
+> AND btrim(region) <> 'Region' -- after removing gaps; <br>
 
 Data is ready for processing and analysis now. Try some queries and visualizations directly in Impala, e.g.:
 
