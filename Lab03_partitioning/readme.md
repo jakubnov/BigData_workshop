@@ -1,4 +1,5 @@
-readme.md
+# <b> LAB in progress </b>
+
 
 ### Lab goal: 
 Once done, user will be able to use partitioning in tables and also will be able to perform "compaction" in case of tables with many data blocks.
