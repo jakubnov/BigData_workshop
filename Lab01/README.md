@@ -65,7 +65,7 @@ Once uploaded run refresh table's metadata:
 <i> Note: </i>
 There is often reccomended to Invalidate all metadata and rebuild index, but this has some consequences: 
 * It's better to refresh just the table you are working with instead of Invalidating all metadata and rebuilding index. Invalidation of all metadata is resource demanding and in case there are hundreds or thousands tables (with thousands of data files) could cause some serious delays. 
-* When there are access restrictions set up on cluster per user groups and you are not allowed to access (and thefore also see) all databases, you won't be able to invalidate and refresh all metadata (you will be facing error on top right corner) on following screen.
+* When there are access restrictions set up on cluster per user groups and you are not allowed to access and also see all databases (by Sentry tool). You won't be able to invalidate and refresh all metadata (you will be facing error on top right corner) on following screen.
 
 ![](printscreens/Impala_invalidate.png)
 
