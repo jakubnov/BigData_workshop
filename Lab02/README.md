@@ -39,16 +39,17 @@ Define new schedule: add workflow you created in the previous step and set sched
 
 ![](printscreens/Scheduler.png)
 
+
 <b> Important parts to setup: </b>
 * Check Advanced settings
 * Crontab set as * * * * *  (5 stars) - query will run each minute
 * Set Timezone as "Europe/Prague" 
 * From / To withtin the same day, e.g. for about an hour interval
 
-After this commit schedule (without dryrun). 
+<b> Save the schedule, commit it and run without dryrun. </b>
 
 
-<u> help: </u> </br>
+<b> help: </b> </br>
 * 1st possition: Minute (0-59) </br>
 * 2nd possition: Hour (0-23)</br>
 * 3rd possition: Day of month (1-31) </br>
@@ -56,10 +57,6 @@ After this commit schedule (without dryrun).
 * 5th possition: Day of week (0-7) 0 and 7 are Sundays </br>
 * e.g. * 16-17 * * *  -> query will run each day, each minute between 16-17 hour (4-5pm). 
                
-
-
-Save the schedule.
-
 ### Step 5: Check results
 First step is to refresh medata in case you didn't add REFRESH databasename.tablename at the end of scheduled script.
 
