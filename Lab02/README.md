@@ -49,7 +49,7 @@ Define new schedule: add workflow you created in the previous step and set sched
 <b> Save the schedule, commit it and run without dryrun. </b>
 
 
-<b> help: </b> </br>
+<b> Crontab help: </b> </br>
 * 1st possition: Minute (0-59) </br>
 * 2nd possition: Hour (0-23)</br>
 * 3rd possition: Day of month (1-31) </br>
