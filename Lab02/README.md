@@ -26,6 +26,10 @@ Since we have created a table into that result of schedulled query will be saved
 
 and hit save the query. Have only this query in the query window. 
 
+<b> Check your timezone: </b> In Impala run query that will informs you about timezone set for cluster. Will be needed later during schedulling.
+
+> select timeofday();
+
 ### Step 3: Create workflow
 Open Scheduler - Worflow and create new workflow: drag and drop Hive query. 
 
@@ -38,7 +42,6 @@ Open Scheduler - Schedule </br>
 Define new schedule: add workflow you created in the previous step and set scheduler. </br>
 
 ![](printscreens/Scheduler.png)
-
 
 <b> Important parts to setup: </b>
 * Check Advanced settings
